@@ -1,0 +1,296 @@
+#my-torn-helper-window {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #333;
+    color: #f0f0f0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    z-index: 10000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.window-header {
+    padding: 10px;
+    background-color: #444;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.window-header button {
+    background: #555;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.window-menu {
+    display: flex;
+    background-color: #2c2c2c;
+    padding: 5px;
+    gap: 5px;
+}
+
+.menu-button {
+    flex-grow: 1;
+    padding: 8px;
+    background-color: #555;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.menu-button:hover {
+    background-color: #666;
+}
+
+.menu-button.active {
+    background-color: #2196F3;
+}
+
+.menu-button.warning {
+    background-color: #D32F2F;
+    color: white;
+}
+
+.menu-button.warning:hover {
+    background-color: #B71C1C;
+}
+
+.tab-content {
+    padding: 15px;
+}
+
+.settings-section {
+    margin-bottom: 20px;
+}
+
+.api-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.api-section input {
+    padding: 8px;
+    background-color: #555;
+    border: 1px solid #777;
+    color: #f0f0f0;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+#save-status.error {
+    color: #F44336;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+
+#chat-display {
+    display: flex; 
+    flex-direction: column; 
+    flex-grow: 1;
+    border: 1px solid #555;
+    background-color: #2c2c2c;
+    padding: 10px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+#chat-display p {
+    margin: 0 0 8px 0;
+    word-wrap: break-word;
+}
+
+.self-message {
+    background-color: #0d47a1;
+    align-self: flex-end;
+    border-radius: 8px;
+    padding: 8px 12px;
+    max-width: 80%;
+}
+
+#chat-input {
+    border: 1px solid #555;
+    background-color: #3f3f3f;
+    color: #f0f0f0;
+    padding: 8px;
+    border-radius: 3px;
+    resize: vertical;
+    min-height: 40px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+#chat-send-button {
+    padding: 10px;
+    width: 100%;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#chat-send-button:hover {
+    background-color: #1976D2;
+}
+
+.chat-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.chat-toggle-button {
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.chat-toggle-button.connect-button {
+    background-color: #4CAF50;
+}
+.chat-toggle-button.connect-button:hover {
+    background-color: #45a049;
+}
+
+.chat-toggle-button.disconnect-button {
+    background-color: #f44336;
+}
+.chat-toggle-button.disconnect-button:hover {
+    background-color: #d32f2f;
+}
+
+.chat-toggle-button:disabled {
+    background-color: #FFC107;
+    color: black;
+    cursor: wait;
+}
+
+.chat-status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.status-connected {
+    color: white;
+    background-color: #4CAF50;
+}
+
+.status-disconnected {
+    color: #e0e0e0;
+    background-color: #f44336;
+}
+
+.status-connecting {
+    color: black;
+    background-color: #FFC107;
+}
+
+.resizer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    cursor: se-resize;
+    background: repeating-linear-gradient(-45deg, #555, #555 1px, transparent 1px, transparent 4px);
+}
+
+.poker-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.poker-controls button {
+    flex-basis: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+#get-logs-button {
+    background-color: #4CAF50;
+}
+#get-logs-button:hover {
+    background-color: #45a049;
+}
+
+#reset-button {
+    background-color: #6c757d;
+}
+#reset-button:hover {
+    background-color: #5a6268;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.player-info {
+    margin-bottom: 10px;
+}
+
+.prediction-details summary {
+    cursor: pointer;
+    padding: 5px;
+    background-color: #4a4a4a;
+    border-radius: 3px;
+    margin-top: 5px;
+    outline: none;
+    font-size: 13px;
+}
+
+.prediction-details summary:hover {
+    background-color: #5a5a5a;
+}
+
+.prediction-details ul {
+    list-style-type: none;
+    padding-left: 15px;
+    margin-top: 8px;
+    border-left: 2px solid #555;
+}
+
+.prediction-details li {
+    padding: 2px 0;
+    font-size: 13px;
+    color: #ccc;
+}
